@@ -302,16 +302,15 @@
 	  </style>
 	</head>
 	<body onload="init()">
-		<audio id="myAudio" controls autoplay hidden>
- 			 <source src="merry go round of life (Howl's Moving Castle but is it okay if it's lofi hiphop).mp3" type="audio/mpeg">
- 			 Your browser does not support the audio element.
-		</audio>
-
-		<script>
-			function myFunction() {
-  			var x = document.getElementById("myAudio").autoplay;
-			}
-		</script>
+		<audio id="audio" loop="" autoplay="">
+            <source src="merry go round of life (Howl's Moving Castle but is it okay if it's lofi hiphop).mp3" type="audio/mpeg">
+            <script>
+               const audio = document.getElementById('audio');
+               
+               settings.audioElement = audio;
+               settings.audioElement.volume = 0;
+            </script>
+         </audio>
 		<div class="kontrol" onload="readStorage()">
 			<div class="panah"></div>
 			<div class="custom-control custom-radio">
@@ -358,10 +357,7 @@
 		      <input type="radio" class="custom-control-input" id="customRadio9" name="example1">
 		      <label class="custom-control-label" for="customRadio9">RGB Gaming :v</label>
 		    </div>
-		    <div class="custom-control custom-radio">
-		      <input type="radio" class="custom-control-input" id="myAudio" name="example1">
-		      <label class="custom-control-label" for="customRadio9">Music</label>
-		    </div>
+		    
 			
 		    <input class="btn mt-3" id="color-picker" value='#0079FF' onclick="onClickWarna()"/>
 		</div>
