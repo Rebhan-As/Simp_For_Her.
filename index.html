@@ -2,8 +2,6 @@
 <html lang="en">
 	<head>
 	  <title>SIMP</title>
-	  
-	<bgsound src="merry go round of life (Howl's Moving Castle but is it okay if it's lofi hiphop).mp3" loop="-1"></bgsound>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -304,9 +302,15 @@
 	  </style>
 	</head>
 	<body onload="init()">
-		<audio loop autoplay>
- 		<source src="merry go round of life (Howl's Moving Castle but is it okay if it's lofi hiphop).mp3">
-	  </audio>
+		<audio id="audio" loop="">
+            <source src="merry go round of life (Howl's Moving Castle but is it okay if it's lofi hiphop).mp3">
+            <script>
+               const audio = document.getElementById('audio');
+               
+               settings.audioElement = audio;
+               settings.audioElement.volume = 0;
+            </script>
+         </audio>
 		<div class="kontrol" onload="readStorage()">
 			<div class="panah"></div>
 			<div class="custom-control custom-radio">
