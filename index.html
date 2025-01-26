@@ -147,69 +147,50 @@
   			height: 100%;
   			overflow: hidden;
   			z-index: -1;
-		}
-
-		.kotak li{
-  		position: absolute;
-  		display: block;
-  		list-style: none;
-  		width: 60px; /* Lebar kelopak bunga */
- 		height: 60px; /* Tinggi kelopak bunga */
-  		border-radius: 50%; /* Membuat kelopak berbentuk lingkaran */
- 		transform-origin: center center;
-  		animation: animate 15s linear infinite;
-  		bottom: -150px; /* Mulai di bawah layar */
-		}
-
-		.kotak li:nth-child(1){
-  		left: 86%;
-  		background: pink; /* Warna kelopak pertama */
- 		animation-delay: 0s;
-		}
-
-		.kotak li:nth-child(2){
-  		left: 70%;
-  		background: lightblue; /* Warna kelopak kedua */
-  		animation-delay: 2s;
-  		animation-duration: 10s;
-		}
-
-		.kotak li:nth-child(3){
-  		left: 55%;
-  		background: lavender; /* Warna kelopak ketiga */
-  		animation-delay: 4s;
-		}
-
-		.kotak li:nth-child(4){
-  		left: 42%;
- 		 background: yellow; /* Warna kelopak keempat */
-  		animation-delay: 1s;
-  		animation-duration: 12s;
-		}
-
-		.kotak li:nth-child(5){
-  		left: 30%;
- 		background: lightgreen; /* Warna kelopak kelima */
- 		animation-delay: 3.5s;
-		}
-
-		.kotak li:nth-child(6){
-  		left: 15%;
-  		background: coral; /* Warna kelopak keenam */
-  		animation-delay: 2.5s;
-		}
-
-		.kotak li:nth-child(7){
-  		left: 50%;
-  		background: peachpuff; /* Warna kelopak ketujuh */
-  		animation-delay: 5s;
-		}
-
-		.kotak li:nth-child(8){
-  		left: 75%;
-  		background: violet; /* Warna kelopak kedelapan */
-  		animation-delay: 6s;
-		}
+  		}
+  		.kotak li{
+  			position: absolute;
+  			display: block;
+  			list-style: none;
+  			width: 25px;
+  			height: 25px;
+  			background: rgba(255,255,255,0.2);
+  			animation: animate 20s linear infinite; 
+  			bottom: -150px;
+  			transition: all 1s ease;
+  		}
+  		.kotak li:nth-child(1){
+  			left: 86%;
+  			width: 80px;
+  			height: 80px;
+  			animation-delay: 0s;
+  		}
+  		.kotak li:nth-child(2){
+  			left: 12%;
+  			width: 30px;
+  			height: 30px;
+  			animation-delay: 1.5s;
+  			animation-duration: 10s;
+  		}
+  		.kotak li:nth-child(3){
+  			left: 70%;
+  			width: 100px;
+  			height: 100px;
+  			animation-delay: 5.5s;
+  		}
+  		.kotak li:nth-child(4){
+  			left: 42%;
+  			width: 150px;
+  			height: 150px;
+  			animation-delay: 0s;
+  			animation-duration: 15s; 
+  		}
+  		.kotak li:nth-child(5){
+  			left: 15%;
+  			width: 110px;
+  			height: 110px;
+  			animation-delay: 3.5s;
+  		}
   		.bulat{
   			position: absolute;
   			width: 600px;
