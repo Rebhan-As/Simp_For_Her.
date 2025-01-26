@@ -155,7 +155,6 @@
   list-style: none;
   width: 60px; /* Lebar kelopak bunga */
   height: 60px; /* Tinggi kelopak bunga */
-  background: pink; /* Warna kelopak bunga */
   border-radius: 50%; /* Membuat kelopak berbentuk lingkaran */
   transform-origin: center center;
   animation: animate 15s linear infinite;
@@ -164,29 +163,53 @@
 
 .kotak li:nth-child(1) {
   left: 86%;
+  background: pink; /* Warna kelopak pertama */
   animation-delay: 0s;
 }
 
 .kotak li:nth-child(2) {
+  left: 70%;
+  background: lightblue; /* Warna kelopak kedua */
   animation-delay: 2s;
   animation-duration: 10s;
 }
 
 .kotak li:nth-child(3) {
-  left: 70%;
+  left: 55%;
+  background: lavender; /* Warna kelopak ketiga */
   animation-delay: 4s;
 }
 
 .kotak li:nth-child(4) {
   left: 42%;
+  background: yellow; /* Warna kelopak keempat */
   animation-delay: 1s;
   animation-duration: 12s;
 }
 
 .kotak li:nth-child(5) {
-  left: 15%;
+  left: 30%;
+  background: lightgreen; /* Warna kelopak kelima */
   animation-delay: 3.5s;
-		}
+}
+
+.kotak li:nth-child(6) {
+  left: 15%;
+  background: coral; /* Warna kelopak keenam */
+  animation-delay: 2.5s;
+}
+
+.kotak li:nth-child(7) {
+  left: 50%;
+  background: peachpuff; /* Warna kelopak ketujuh */
+  animation-delay: 5s;
+}
+
+.kotak li:nth-child(8) {
+  left: 75%;
+  background: violet; /* Warna kelopak kedelapan */
+  animation-delay: 6s;
+}
   		.bulat{
   			position: absolute;
   			width: 600px;
@@ -238,7 +261,8 @@
   			right: 0px;
   			opacity: 0.3;
   		}
-  		@keyframes animate {
+  		/* Animasi untuk memberikan efek seperti bunga berkembang */
+@keyframes animate {
   0% {
     transform: rotate(0deg) scale(0.5); /* Kelopak lebih kecil */
     opacity: 0;
@@ -250,24 +274,8 @@
   100% {
     transform: rotate(360deg) scale(0.5); /* Kelopak kembali ke ukuran semula */
     opacity: 0;
-  			}
-  		}
-  		@keyframes animate2{
-  			0%{
-  				transform:rotate(0deg);
-  			}
-  			100%{
-  				transform:rotate(360deg);
-  			}
-  		}
-  		@keyframes animate3{
-  			0%{
-  				transform:rotate(360deg);
-  			}
-  			100%{
-  				transform:rotate(0deg);
-  			}
-  		}
+  }
+}
   		@media only screen and (max-width: 900px), screen and (max-height: 700px) {
   			.jam,.ucapan{
   				transition: all 1s ease;
