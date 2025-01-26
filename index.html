@@ -140,7 +140,7 @@
 	  		width: 100vh;
 	  	}
   		.kotak{
-  			position: absolute;
+  			position: relative;
   			top: 0;
   			left: 0;
   			width: 100%;
@@ -152,12 +152,14 @@
   			position: absolute;
   			display: block;
   			list-style: none;
-  			width: 60px; /* Lebar kelopak bunga */
-  			height: 60px; /* Tinggi kelopak bunga */
- 			border-radius: 50%; /* Membuat kelopak berbentuk lingkaran */
+  			width: 80px; /* Lebar kelopak bunga */
+  			height: 140px; /* Tinggi kelopak bunga */
+  			background: pink; /* Warna kelopak bunga */
+			border-radius: 50%; /* Membuat kelopak berbentuk bulat */
   			transform-origin: center center;
   			animation: animate 15s linear infinite;
-			bottom: -150px; /* Mulai di bawah layar */
+  			bottom: -150px; /* Mulai di bawah layar */
+  			transform: rotate(45deg); /* Memutar kelopak agar lebih mirip bunga */
   		}
   		.kotak li:nth-child(1){
   			left: 86%;
