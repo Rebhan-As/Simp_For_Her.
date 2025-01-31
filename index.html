@@ -140,57 +140,102 @@
 	  		width: 100vh;
 	  	}
   		.kotak{
-  			position: absolute;
-  			top: 0;
-  			left: 0;
-  			width: 100%;
-  			height: 100%;
-  			overflow: hidden;
-  			z-index: -1;
-  		}
-  		.kotak li{
-  			position: absolute;
-  			display: block;
-  			list-style: none;
-  			width: 25px;
-  			height: 25px;
-  			background: rgba(255,255,255,0.2);
-  			animation: animate 20s linear infinite; 
-  			bottom: -150px;
-  			transition: all 1s ease;
-  		}
-  		.kotak li:nth-child(1){
-  			left: 86%;
-  			width: 80px;
-  			height: 80px;
-  			animation-delay: 0s;
-  		}
-  		.kotak li:nth-child(2){
-  			left: 12%;
-  			width: 30px;
-  			height: 30px;
-  			animation-delay: 1.5s;
-  			animation-duration: 10s;
-  		}
-  		.kotak li:nth-child(3){
-  			left: 70%;
-  			width: 100px;
-  			height: 100px;
-  			animation-delay: 5.5s;
-  		}
-  		.kotak li:nth-child(4){
-  			left: 42%;
-  			width: 150px;
-  			height: 150px;
-  			animation-delay: 0s;
-  			animation-duration: 15s; 
-  		}
-  		.kotak li:nth-child(5){
-  			left: 15%;
-  			width: 110px;
-  			height: 110px;
-  			animation-delay: 3.5s;
-  		}
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		overflow: hidden;
+    		z-index: -1;
+}
+
+.kotak li{
+    position: absolute;
+            display: block;
+            list-style: none;
+            width: 50px;
+            height: 50px;
+            background: transparent !important; /* Hapus background kotak */
+            animation: animate 20s linear infinite; 
+            bottom: -150px;
+            transition: all 1s ease;
+            opacity: 0.8;
+}
+
+/* Bunga dengan variasi bentuk dan warna */
+.kotak li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flowerRotate 4s linear infinite;
+}
+
+/* Variasi bunga berbeda */
+.kotak li:nth-child(1)::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF69B4"><path d="M12 2C5.5 2 1 9.3 1 14.5 1 20.1 5.8 22 12 22s11-1.9 11-7.5C23 9.3 18.5 2 12 2zm0 15a3 3 0 110-6 3 3 0 010 6z"/></svg>');
+}
+
+.kotak li:nth-child(2)::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFD700"><path d="M12 2.5L8.55 8.5H2.5L7 13.5 5.45 20.5 12 17.5 18.55 20.5 17 13.5 21.5 8.5H15.45z"/></svg>');
+}
+
+.kotak li:nth-child(3)::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2387CEEB"><path d="M12 2C7.03 2 3 6.03 3 11c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/></svg>');
+}
+
+.kotak li:nth-child(4)::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF1493"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>');
+}
+
+.kotak li:nth-child(5)::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2390EE90"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>');
+}
+
+/* Ukuran dan posisi */
+.kotak li:nth-child(1){
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.kotak li:nth-child(2){
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.kotak li:nth-child(3){
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+
+.kotak li:nth-child(4){
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.kotak li:nth-child(5){
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+}
+
+@keyframes flowerRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
   		.bulat{
   			position: absolute;
   			width: 600px;
