@@ -191,6 +191,16 @@
   			height: 110px;
   			animation-delay: 3.5s;
   		}
+  		.bulat{
+  			position: absolute;
+  			width: 600px;
+  			height: 600px;
+  			display: flex;
+  			left:50%;
+	  		bottom: 50%;
+	  		transform: translate(-50%,50%) scale(0);
+	  		transition: 3s all ease;
+  		}
   		.bulat span:nth-child(1){
   			position: absolute;
   			top: 0;
@@ -232,8 +242,7 @@
   			right: 0px;
   			opacity: 0.3;
   		}
-  		/* Animasi untuk memberikan efek seperti bunga berkembang */
-		@keyframes animate{
+  		@keyframes animate{
   			0%{
   				transform: translateY(0) rotate(0deg);
   				opacity: 1;
@@ -258,26 +267,7 @@
   			100%{
   				transform:rotate(0deg);
   			}
-		}
-		  @keyframes animate4{
-  			0% {
-    			transform: rotate(0deg) scale(0.5); /* Kelopak lebih kecil */
-    			opacity: 0;
-  			}
-  			50% {
-    			transform: rotate(180deg) scale(1.2); /* Kelopak membesar dan berputar */
-    			opacity: 1;
-  			}
-  			100% {
-    			transform: rotate(360deg) scale(0.5); /* Kelopak kembali ke ukuran semula */
-    			opacity: 0;
-  			}
-		   @keyframes flowerWobble {
-            		0%, 100% { transform: rotate(-10deg); }
-            		50% { transform: rotate(10deg); }
-        		}
-		}
-  		
+  		}
   		@media only screen and (max-width: 900px), screen and (max-height: 700px) {
   			.jam,.ucapan{
   				transition: all 1s ease;
