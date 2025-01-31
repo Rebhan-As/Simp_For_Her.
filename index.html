@@ -157,36 +157,47 @@
   			background: pink; /* Warna kelopak bunga */
 			border-radius: 50%; /* Membuat kelopak berbentuk bulat */
   			transform-origin: center center;
-  			animation: animate 15s linear infinite;
+  			animation: animate 20s linear infinite;
   			bottom: -150px; /* Mulai di bawah layar */
   			transform: rotate(45deg); /* Memutar kelopak agar lebih mirip bunga */
   		}
+		.kotak li::before {
+            		content: "🌸";
+            		font-size: 40px;
+            		position: absolute;
+            		animation: flowerWobble 2s ease-in-out infinite;
+        	}
   		.kotak li:nth-child(1){
   			left: 86%;
   			background: pink; /* Warna kelopak pertama */
   			animation-delay: 0s;;
+			content: "🌺"; color: #ff69b4;
   		}
   		.kotak li:nth-child(2){
   			left: 12%;
   			background: lightblue; /* Warna kelopak kedua */
   			animation-delay: 2s;
   			animation-duration: 10s;
+			content: "🌻"; color: #ffd700;
   		}
   		.kotak li:nth-child(3){
   			left: 70%;
   			background: lavender; /* Warna kelopak ketiga */
   			animation-delay: 4s;
+			content: "🌼"; color: #fff44f;
   		}
   		.kotak li:nth-child(4){
   			left: 42%;
   			background: yellow; /* Warna kelopak keempat */
   			animation-delay: 1s;
   			animation-duration: 12s;
+			content: "💮"; color: #ffffff;
   		}
   		.kotak li:nth-child(5){
   			left: 15%;
   			background: lightgreen; /* Warna kelopak kelima */
   			animation-delay: 3.5s;
+			content: "🌷"; color: #ff1493;
   		}
   		.bulat{
   			position: absolute;
@@ -279,6 +290,10 @@
     			transform: rotate(360deg) scale(0.5); /* Kelopak kembali ke ukuran semula */
     			opacity: 0;
   			}
+		   @keyframes flowerWobble {
+            		0%, 100% { transform: rotate(-10deg); }
+            		50% { transform: rotate(10deg); }
+        		}
 		}
   		
   		@media only screen and (max-width: 900px), screen and (max-height: 700px) {
