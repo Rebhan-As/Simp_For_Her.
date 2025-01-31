@@ -150,16 +150,15 @@
   		}
   		.kotak li{
   			position: absolute;
-  			display: block;
-  			list-style: none;
-  			width: 80px; /* Lebar kelopak bunga */
-  			height: 140px; /* Tinggi kelopak bunga */
-  			background: pink; /* Warna kelopak bunga */
-			border-radius: 50%; /* Membuat kelopak berbentuk bulat */
-  			transform-origin: center center;
-  			animation: animate 20s linear infinite;
-  			bottom: -150px; /* Mulai di bawah layar */
-  			transform: rotate(45deg); /* Memutar kelopak agar lebih mirip bunga */
+            		display: block;
+            		list-style: none;
+            		width: 50px;
+            		height: 50px;
+            		background: transparent;
+            		animation: animate 20s linear infinite; 
+            		bottom: -150px;
+            		transition: all 1s ease;
+            		opacity: 0.8;
   		}
 		.kotak li::before {
             		content: "🌸";
@@ -167,38 +166,12 @@
             		position: absolute;
             		animation: flowerWobble 2s ease-in-out infinite;
         	}
-  		.kotak li:nth-child(1){
-  			left: 86%;
-  			background: pink; /* Warna kelopak pertama */
-  			animation-delay: 0s;;
-			content: "🌺"; color: #ff69b4;
-  		}
-  		.kotak li:nth-child(2){
-  			left: 12%;
-  			background: lightblue; /* Warna kelopak kedua */
-  			animation-delay: 2s;
-  			animation-duration: 10s;
-			content: "🌻"; color: #ffd700;
-  		}
-  		.kotak li:nth-child(3){
-  			left: 70%;
-  			background: lavender; /* Warna kelopak ketiga */
-  			animation-delay: 4s;
-			content: "🌼"; color: #fff44f;
-  		}
-  		.kotak li:nth-child(4){
-  			left: 42%;
-  			background: yellow; /* Warna kelopak keempat */
-  			animation-delay: 1s;
-  			animation-duration: 12s;
-			content: "💮"; color: #ffffff;
-  		}
-  		.kotak li:nth-child(5){
-  			left: 15%;
-  			background: lightgreen; /* Warna kelopak kelima */
-  			animation-delay: 3.5s;
-			content: "🌷"; color: #ff1493;
-  		}
+  		/* Variasi bunga berbeda */
+        		.kotak li:nth-child(1)::before { content: "🌺"; color: #ff69b4; }
+        		.kotak li:nth-child(2)::before { content: "🌻"; color: #ffd700; }
+        		.kotak li:nth-child(3)::before { content: "🌼"; color: #fff44f; }
+        		.kotak li:nth-child(4)::before { content: "🌷"; color: #ff1493; }
+        		.kotak li:nth-child(5)::before { content: "💮"; color: #ffffff; }
   		.bulat{
   			position: absolute;
   			width: 600px;
