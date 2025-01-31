@@ -149,69 +149,47 @@
   			z-index: -1;
   		}
   		.kotak li{
-            		position: absolute;
-            		display: block;
-            		list-style: none;
-            		width: 50px;
-            		height: 50px;
-            		background: transparent;
-            		animation: animate 20s linear infinite; 
-            		bottom: -150px;
-            		transition: all 1s ease;
-            		opacity: 0.8;
+  			position: absolute;
+  			display: block;
+  			list-style: none;
+  			width: 25px;
+  			height: 25px;
+  			background: rgba(255,255,255,0.2);
+  			animation: animate 20s linear infinite; 
+  			bottom: -150px;
+  			transition: all 1s ease;
   		}
-		.kotak li::before {
-            		content: "🌸";
-            		font-size: 40px;
-            		position: absolute;
-            		animation: flowerWobble 2s ease-in-out infinite;
-        	}
-  		.kotak li:nth-child(1)::before{
+  		.kotak li:nth-child(1){
   			left: 86%;
   			width: 80px;
   			height: 80px;
   			animation-delay: 0s;
-			content: "🌺"; color: #ff69b4;
   		}
-  		.kotak li:nth-child(2)::before{
+  		.kotak li:nth-child(2){
   			left: 12%;
   			width: 30px;
   			height: 30px;
   			animation-delay: 1.5s;
   			animation-duration: 10s;
-			content: "🌻"; color: #ffd700;
   		}
-  		.kotak li:nth-child(3)::before{
+  		.kotak li:nth-child(3){
   			left: 70%;
   			width: 100px;
   			height: 100px;
   			animation-delay: 5.5s;
-			content: "🌼"; color: #fff44f;
   		}
-  		.kotak li:nth-child(4)::before{
+  		.kotak li:nth-child(4){
   			left: 42%;
   			width: 150px;
   			height: 150px;
   			animation-delay: 0s;
-  			animation-duration: 15s;
-			content: "🌷"; color: #ff1493;
+  			animation-duration: 15s; 
   		}
-  		.kotak li:nth-child(5)::before{
+  		.kotak li:nth-child(5){
   			left: 15%;
   			width: 110px;
   			height: 110px;
   			animation-delay: 3.5s;
-			content: "💮"; color: #ffffff; 
-  		}
-  		.bulat{
-  			position: absolute;
-  			width: 600px;
-  			height: 600px;
-  			display: flex;
-  			left:50%;
-	  		bottom: 50%;
-	  		transform: translate(-50%,50%) scale(0);
-	  		transition: 3s all ease;
   		}
   		.bulat span:nth-child(1){
   			position: absolute;
